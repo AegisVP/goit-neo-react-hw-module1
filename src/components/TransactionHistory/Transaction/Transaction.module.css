@@ -1,0 +1,23 @@
+.transaction {
+  background-color: #ffffff;
+}
+
+.transaction:nth-child(2n) {
+  background-color: #e8eeee;
+}
+
+.type {
+  padding: 0 0 0 20px;
+  width: 60%;
+}
+
+.amount {
+  padding: 0 10px;
+  width: 20%;
+  text-align: right;
+}
+
+.currency {
+  width: 20%;
+  text-align: center;
+}
