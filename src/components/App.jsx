@@ -5,7 +5,7 @@ import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 import css from './App.module.css';
 
-import userProfile from '../data/user.json';
+import profile from '../data/user.json';
 import friendsList from '../data/friends.json';
 import transactionHistory from '../data/transactions.json';
 
@@ -14,20 +14,20 @@ function App() {
     <div className={css.app}>
       <Section title="User profile">
         <Profile
-          image={userProfile.avatar}
-          name={userProfile.username}
-          tag={userProfile.tag}
-          location={userProfile.location}
-          stats={userProfile.stats}
+          image={profile.avatar}
+          name={profile.username}
+          tag={profile.tag}
+          location={profile.location}
+          stats={profile.stats}
         />
       </Section>
 
       <Section title="Friends">
-        <FriendList friendsList={friendsList} />
+        <FriendList friends={friendsList} />
       </Section>
 
       <Section title="Transactions">
-        <TransactionHistory transactionHistory={transactionHistory} />
+        <TransactionHistory items={transactionHistory} />
       </Section>
     </div>
   );

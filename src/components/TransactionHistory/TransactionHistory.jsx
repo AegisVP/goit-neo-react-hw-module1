@@ -1,7 +1,7 @@
 import css from './TransactionHistory.module.css';
 import Transaction from './Transaction/Transaction';
 
-const TransactionHistory = ({ transactionHistory = [] }) => (
+const TransactionHistory = ({ items = [] }) => (
   <table className={css.table}>
     <thead className={css.head}>
       <tr>
@@ -12,7 +12,7 @@ const TransactionHistory = ({ transactionHistory = [] }) => (
     </thead>
 
     <tbody className={css.body}>
-      {transactionHistory.map(({ id, type, amount, currency }) => (
+      {items.map(({ id, type, amount, currency }) => (
         <Transaction key={id} type={type} amount={amount} currency={currency} />
       ))}
     </tbody>
