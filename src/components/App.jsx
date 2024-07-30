@@ -14,20 +14,18 @@ function App() {
     <div className={css.app}>
       <Section title="User profile">
         <Profile
-          avatarURL={userProfile.avatar}
-          userName={userProfile.username}
-          userTag={userProfile.tag}
+          image={userProfile.avatar}
+          name={userProfile.username}
+          tag={userProfile.tag}
           location={userProfile.location}
-          followers={userProfile.stats.followers}
-          views={userProfile.stats.views}
-          likes={userProfile.stats.likes}
+          stats={userProfile.stats}
         />
       </Section>
 
       <Section title="Friends">
         <FriendList friendsList={friendsList} />
       </Section>
-      
+
       <Section title="Transactions">
         <TransactionHistory transactionHistory={transactionHistory} />
       </Section>
